@@ -7,7 +7,7 @@ dt <- fread("household_power_consumption.txt")
 # subset data for specific dates only
 dt <- subset(dt, Date == "1/2/2007" | Date == "2/2/2007")
 
-# Combile Date and Time columns into datetime column
+# Combine Date and Time columns into datetime column
 dt$datetime <- as.POSIXct(paste(dt$Date, dt$Time), format = "%d/%m/%Y %H:%M:%S")
 
 # Plot line
